@@ -29,21 +29,7 @@ export const useFetch = (url) => {
                         data
                     })
                 }
-                // setTimeout(() => {
-
-                //     if (isMounted.current){
-                        
-                //         setState({
-                //             loading: false,
-                //             error: null,
-                //             data
-                //         })
-                //     }else{
-                //         console.log('setState no se llamo')
-                //     }
-                    
-                // }, 4000);
-
+                
             })
             .catch ( ()=> {
                 setState({
@@ -52,9 +38,7 @@ export const useFetch = (url) => {
                     error: 'No se pudo cargar la info'
                 })
             })
-        // return () => {
-        //     cleanup
-        // };
+
     }, [url]);
 
     return state;
